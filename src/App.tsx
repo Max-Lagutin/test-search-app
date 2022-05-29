@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Home} from './containers/Home/Home'
+import {Container} from '@mui/material';
+import Typography from "@mui/material/Typography";
+
+const APP_NAME = 'Ricky Morty App';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Container maxWidth="xl">
+          <Typography gutterBottom sx={{textAlign: "center", marginTop: '30px'}}  variant="h3" component="h1">
+              {APP_NAME}
+          </Typography>
+      <Home />
+    </Container>
   );
 }
 
