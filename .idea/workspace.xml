@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd256455-057f-48e7-9624-184cc3bcf053" name="Changes" comment="feature: Added eslint, prettier, episodes and empty search stub.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cards/CharacterCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/CharacterCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cards/EpisodeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/EpisodeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CharacterDetails/CharacterDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CharacterDetails/CharacterDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home/Home.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="bd256455-057f-48e7-9624-184cc3bcf053" name="Changes" comment="misc: Code clean-up." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653817026036</updated>
       <workItem from="1653817029887" duration="61304000" />
-      <workItem from="1653937941462" duration="6010000" />
+      <workItem from="1653937941462" duration="6336000" />
     </task>
     <task id="LOCAL-00001" summary="feature: Added list and filters basic variant">
       <created>1653865772348</created>
@@ -84,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653950151158</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="misc: Code clean-up.">
+      <created>1653950807629</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653950807629</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +105,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature: Added list and filters basic variant" />
     <MESSAGE value="feature: Added eslint, prettier, episodes and empty search stub." />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: Added eslint, prettier, episodes and empty search stub." />
+    <MESSAGE value="misc: Code clean-up." />
+    <option name="LAST_COMMIT_MESSAGE" value="misc: Code clean-up." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -9,7 +9,7 @@ export const SearchField: React.FC = () => {
 
     const debouncedSearch = debounce((value: string) => {
         dispatch(setFilters({ search: value, pageNumber: 1 }))
-    }, 1000)
+    }, 800)
 
     const onChange = (e: {
         preventDefault: () => void
