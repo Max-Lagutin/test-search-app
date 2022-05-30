@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import { Box, Grid } from '@mui/material';
-import { fetchCharacters } from '../../redux/characters/reducer';
-import { useAppSelector, useAppDispatch } from '../../store/hooks';
-import { CharacterCard } from '../../components/Cards/CharacterCard';
-import { ICharacter } from '../../models/interfaces';
-import { SearchField } from '../../components/SearchField/SearchField';
-import { PaginationWrapper } from '../../components/Pagination/Pagination';
-import { Filters } from '../Filters/Filters';
+import React, { useEffect } from 'react'
+import { Box, Grid } from '@mui/material'
+import { fetchCharacters } from '../../redux/characters/reducer'
+import { useAppSelector, useAppDispatch } from '../../store/hooks'
+import { CharacterCard } from '../../components/Cards/CharacterCard'
+import { ICharacter } from '../../models/interfaces'
+import { SearchField } from '../../components/SearchField/SearchField'
+import { PaginationWrapper } from '../../components/Pagination/Pagination'
+import { Filters } from '../Filters/Filters'
 
 type characterType = ICharacter | undefined
 
@@ -20,7 +20,7 @@ export const Home: React.FC = () => {
 
     useEffect(() => {
         dispatch(fetchCharacters({ ...filters }))
-    }, [filters])
+    }, [dispatch, filters])
 
     if (error) return <div>{`Error: ${error.message}`}</div>
 
@@ -43,9 +43,7 @@ export const Home: React.FC = () => {
                 >
                     {charactersData ? (
                         charactersData.map((character: characterType) => (
-                            <Grid key={character.id} item xs={2} sm={4} md={3}>
-                                <CharacterCard {...character} />
-                            </Grid>
+                            <CharacterCard key={character.id} {...character} />
                         ))
                     ) : (
                         <Box sx={{ textAlign: 'center', width: '100%' }}>

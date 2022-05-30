@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd256455-057f-48e7-9624-184cc3bcf053" name="Changes" comment="feature: Added list and filters basic variant">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Cards/EpisodeCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/CharacterDetails/CharacterDetails.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Filters/categories.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/formatedDate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/interfaces.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/character/reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/filters/reducer.ts" afterDir="false" />
+    <list default="true" id="bd256455-057f-48e7-9624-184cc3bcf053" name="Changes" comment="feature: Added eslint, prettier, episodes and empty search stub.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/characters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/characters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/CharacterCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchField/SearchField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchField/SearchField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Gender.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Gender.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Species.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Species.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Status.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Status.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Filters/category.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cards/CharacterCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/CharacterCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cards/EpisodeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/EpisodeCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CharacterDetails/CharacterDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CharacterDetails/CharacterDetails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/character.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/characters/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/characters/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653817026036</updated>
       <workItem from="1653817029887" duration="61304000" />
-      <workItem from="1653937941462" duration="5268000" />
+      <workItem from="1653937941462" duration="6010000" />
     </task>
     <task id="LOCAL-00001" summary="feature: Added list and filters basic variant">
       <created>1653865772348</created>
@@ -103,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653865772348</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feature: Added eslint, prettier, episodes and empty search stub.">
+      <created>1653950151158</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653950151158</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +103,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature: Added list and filters basic variant" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: Added list and filters basic variant" />
+    <MESSAGE value="feature: Added eslint, prettier, episodes and empty search stub." />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: Added eslint, prettier, episodes and empty search stub." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

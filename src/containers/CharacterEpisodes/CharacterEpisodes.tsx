@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import { Box, Button, Grid, Typography } from '@mui/material';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import React, { useEffect } from 'react'
+import { Box, Button, Grid, Typography } from '@mui/material'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import {
     fetchCharacter,
     fetchCharacterEpisodes,
-} from '../../redux/character/reducer';
-import { EpisodeCard } from '../../components/Cards/EpisodeCard';
-import { CharacterCard } from '../../components/Cards/CharacterCard';
-import { IEpisode } from '../../models/interfaces';
+} from '../../redux/character/reducer'
+import { EpisodeCard } from '../../components/Cards/EpisodeCard'
+import { CharacterCard } from '../../components/Cards/CharacterCard'
+import { IEpisode } from '../../models/interfaces'
 
 const styles = {
     position: 'fixed',
@@ -35,7 +35,7 @@ interface IEpisodeCard {
     data: IEpisode
 }
 
-export const CharacterDetails: React.FC = () => {
+export const CharacterEpisodes: React.FC = () => {
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
     const { character, episode, error } = useAppSelector(
@@ -45,13 +45,13 @@ export const CharacterDetails: React.FC = () => {
 
     useEffect(() => {
         dispatch(fetchCharacter(id))
-    }, [id])
+    }, [dispatch, id])
 
-    const episodeUrls: any = character?.episode
+    const episodeUrls: any = character.episode
 
     useEffect(() => {
         dispatch(fetchCharacterEpisodes(episodeUrls))
-    }, [character])
+    }, [dispatch, character])
 
     if (error) return <div>{`Error: ${error.message}`}</div>
 
@@ -84,15 +84,10 @@ export const CharacterDetails: React.FC = () => {
             <Grid container spacing={3}>
                 {episode &&
                     episode.map((episodeItem: IEpisodeCard) => (
-                        <Grid
+                        <EpisodeCard
                             key={episodeItem.data.id}
-                            item
-                            xs={3}
-                            sm={4}
-                            md={4}
-                        >
-                            <EpisodeCard {...episodeItem.data} />
-                        </Grid>
+                            {...episodeItem.data}
+                        />
                     ))}
             </Grid>
         </Box>

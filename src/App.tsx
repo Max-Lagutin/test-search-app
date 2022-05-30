@@ -1,8 +1,8 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { Container, Typography } from '@mui/material'
-import { Home } from './containers/Home/Home'
-import { CharacterDetails } from './containers/CharacterDetails/CharacterDetails'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Container, Typography } from '@mui/material';
+import { Home } from './containers/Home/Home';
+import { CharacterEpisodes } from './containers/CharacterEpisodes/CharacterEpisodes';
 
 const APP_NAME = 'Ricky Morty App'
 
@@ -19,7 +19,7 @@ function App() {
             </Typography>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path=":id" element={<CharacterDetails />} />
+                <Route path=":id" element={<CharacterEpisodes />} />
             </Routes>
         </Container>
     )
