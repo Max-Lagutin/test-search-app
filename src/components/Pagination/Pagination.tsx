@@ -1,29 +1,36 @@
 import React from 'react';
-// import ReactPaginate from "react-paginate";
-import { IInfo } from '../../models/character';
-import {Box} from '@mui/material';
-import Pagination from '@mui/material/Pagination';
+import { Box, Pagination } from '@mui/material';
+import { setFilters } from '../../redux/filters/reducer';
+import { useAppDispatch } from '../../store/hooks';
+import { IInfo } from '../../models/interfaces';
 
 export interface IPaginate {
-    info: IInfo,
-    pageNumber: number,
-    setPageNumber: (number: number) => void;
+    info: IInfo
+    pageNumber: number
 }
 
 const paginationStyles = {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '30px'
+    marginTop: '30px',
 }
 
-export const PaginationWrapper:React.FC<IPaginate> = ({ pageNumber, info, setPageNumber }) => {
+export const PaginationWrapper: React.FC<IPaginate> = ({
+    pageNumber,
+    info,
+}) => {
+    const dispatch = useAppDispatch()
     const handleChange = (e: React.ChangeEvent<unknown>, value: number) => {
-        setPageNumber(value);
-    };
+        dispatch(setFilters({ pageNumber: value }))
+    }
 
     return (
         <Box sx={paginationStyles}>
-            <Pagination count={info?.pages} page={pageNumber} onChange={handleChange} />
+            <Pagination
+                count={info?.pages}
+                page={pageNumber}
+                onChange={handleChange}
+            />
         </Box>
     )
-};
+}

@@ -1,50 +1,62 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getCharacters } from '../../api/characters';
-import {IParams} from "../../models/character";
+import { ICharacter, IInfo, IParams } from '../../models/interfaces';
 
 export const fetchCharacters = createAsyncThunk(
     'characters/fetchCharacters',
-    async (params: IParams, {rejectWithValue}) => {
+    async (params: IParams, { rejectWithValue }) => {
         try {
             const response = await getCharacters(params)
-            if(response.status !== 200) {
-                throw new Error('Can\'t fetch characters. Server error.');
+            if (response.status !== 200) {
+                throw new Error("Can't fetch characters. Server error.")
             }
-            const data = response.data
-            console.log('response', response);
-            return data
-        } catch(error)  {
-            //TODO ERROR HANDLING
-            // @ts-ignore
-            return rejectWithValue(error.message);
+
+            return response.data
+        } catch (error: any) {
+            if (error.response.status === 404) {
+                return {}
+            }
+            console.log('error', error)
+            return rejectWithValue(error)
         }
     }
 )
 
+interface ICharacterState {
+    characters?: {
+        results: ICharacter[]
+        info: IInfo
+    }
+    isLoading: boolean
+    error?: { message: string }
+}
+
+const initialState: ICharacterState = {
+    characters: {
+        results: [],
+        info: {},
+    },
+    isLoading: false,
+    error: null,
+}
 const charactersSlice = createSlice({
     name: 'characters',
-    initialState: {
-        characters: [],
-        isLoading: false,
-        error: null
-    },
+    initialState: initialState,
     reducers: {},
-    extraReducers: (builder) => {
-        builder
-            .addCase(fetchCharacters.pending, (state) => {
-            state.isLoading = true;
+    extraReducers: builder => {
+        builder.addCase(fetchCharacters.pending, state => {
+            state.isLoading = true
         })
-        builder
-            .addCase(fetchCharacters.fulfilled, (state, action) => {
-            state.isLoading = false;
-            state.characters = action.payload;
+        builder.addCase(fetchCharacters.fulfilled, (state, action) => {
+            state.isLoading = false
+            state.characters = action.payload
         })
-        // builder
-        //     .addCase(fetchCharacters.rejected, (state, action) => {
-        //     state.isLoading = false;
-        //     state.error = action.payload;
-        // })
+        builder.addCase(fetchCharacters.rejected, (state, action) => {
+            state.isLoading = false
+            // @ts-ignore
+            state.error = action.payload
+        })
     },
-});
+})
 
-export default charactersSlice.reducer;
+export default charactersSlice.reducer

@@ -1,13 +1,20 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import {ICharacter} from '../../models/character';
+import { Link, useLocation } from 'react-router-dom';
+import {
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Typography,
+} from '@mui/material'
+import { ICharacter } from '../../models/interfaces';
+import { formatedDate } from '../../helpers/formatedDate';
 
-export const MediaCard:React.FC<ICharacter> = ({ created, gender, image, name, species, status,  }) => {
+export const CharacterCard: React.FC<ICharacter> = props => {
+    const location = useLocation()
+    const isMainPage = location.pathname === '/'
+    const { id, created, gender, image, name, species, status } = props
+
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
@@ -30,12 +37,14 @@ export const MediaCard:React.FC<ICharacter> = ({ created, gender, image, name, s
                     Status: {status}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                   Created: {created}
+                    Created: {formatedDate(created)}
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
+            {isMainPage && (
+                <CardActions>
+                    <Link to={`${id}`}>SHOW EPISODES</Link>
+                </CardActions>
+            )}
         </Card>
-    );
+    )
 }

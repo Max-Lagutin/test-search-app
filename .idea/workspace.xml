@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd256455-057f-48e7-9624-184cc3bcf053" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/characters.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card/Card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchField/SearchField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Filters/Filters.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Filters/Gender.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Filters/Species.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Filters/Status.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Filters/category.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Home/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/character.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/characters/reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/hooks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers.ts" afterDir="false" />
+    <list default="true" id="bd256455-057f-48e7-9624-184cc3bcf053" name="Changes" comment="feature: Added list and filters basic variant">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Cards/EpisodeCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/CharacterDetails/CharacterDetails.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Filters/categories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/formatedDate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/interfaces.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/character/reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/filters/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/characters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/characters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/CharacterCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pagination/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchField/SearchField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchField/SearchField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Filters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Gender.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Gender.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Species.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Species.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Filters/Status.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Filters/Status.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Filters/category.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/character.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/characters/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/characters/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +41,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,15 +64,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/store" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/store" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -79,8 +93,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653817026036</updated>
-      <workItem from="1653817029887" duration="29084000" />
+      <workItem from="1653817029887" duration="61304000" />
+      <workItem from="1653937941462" duration="5268000" />
     </task>
+    <task id="LOCAL-00001" summary="feature: Added list and filters basic variant">
+      <created>1653865772348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653865772348</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,5 +119,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feature: Added list and filters basic variant" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: Added list and filters basic variant" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,13 +1,23 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import {useState} from "react";
+import * as React from 'react'
+import debounce from 'lodash.debounce'
+import { Box, TextField } from '@mui/material'
+import { useAppDispatch } from '../../store/hooks'
+import { setFilters } from '../../redux/filters/reducer'
 
-export default function BasicTextFields() {
-    const [query, setQuery] = useState('')
-    const onChange = (e: { target: { value: string; }; }) => {
-        const {value} = e.target;
-        setQuery(value)
+export const SearchField: React.FC = () => {
+    const dispatch = useAppDispatch()
+
+    const debouncedSearch = debounce((value: string) => {
+        dispatch(setFilters({ search: value, pageNumber: 1 }))
+    }, 1000)
+
+    const onChange = (e: {
+        preventDefault: () => void
+        target: { value: string }
+    }) => {
+        e.preventDefault()
+        const { value } = e.target
+        debouncedSearch(value)
     }
 
     return (
@@ -16,7 +26,7 @@ export default function BasicTextFields() {
             sx={{
                 '& > :not(style)': { m: 1, width: '400px' },
                 textAlign: 'center',
-                margin: '60px 0'
+                margin: '60px 0',
             }}
             noValidate
             autoComplete="off"
@@ -25,8 +35,7 @@ export default function BasicTextFields() {
                 label="Search your character"
                 variant="outlined"
                 onChange={onChange}
-                value={query}
             />
         </Box>
-    );
+    )
 }
